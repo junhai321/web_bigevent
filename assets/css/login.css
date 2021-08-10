@@ -1,0 +1,71 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: lightblue;
+}
+/* 自动填充去掉背景 */
+input:-webkit-autofill {
+    box-shadow:0 0 0 1000px transparent inset !important;
+  }
+  input:-internal-autofill-previewed,
+    input:-internal-autofill-selected {
+    -webkit-text-fill-color: #333 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.loginAndRegBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 500px;
+	/* height: 350px; */
+	border-radius: 10px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 30px #888888;
+	text-align: center;
+}
+.title-box {
+	margin: 5px 0;
+	text-align: center;
+	font-size: 30px;
+	color: orange;
+}
+.icon_size {
+	font-size: 25px;
+	vertical-align: middle;
+}
+.user,
+.pasword {
+	width: 300px;
+	height: 50px;
+	/* border: 1px solid black; */
+	margin: 20px auto;
+	text-align: center;
+	line-height: 50px;
+}
+.ipt {
+	width: 250px;
+	height: 45px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #999;
+	outline: none;
+	padding-left: 5px;
+}
+.color {
+	background-color: orange !important;
+}
+#btn {
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
