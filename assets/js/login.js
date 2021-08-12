@@ -53,8 +53,9 @@ $(function(){
 				if(res.status !== 0){
 				return layer.msg(res.message);	
 			}
-			msg(res.message);
-			location.href = '/index.html';
+			// layer.msg(res.message);
+			localStorage.setItem('token', res.token);
+			window.location.href = 'index.html';
 		})
 		
 	})
