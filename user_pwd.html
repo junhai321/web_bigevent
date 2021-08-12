@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改密码</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/user.css" />
+		<link rel="stylesheet" type="text/css" href="assets/lib/layui/css/layui.css"/>
+		<script src="assets/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/lib/layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/ajaxPrefilter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/user_pwd.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="revise">
+			修改密码
+			<form class="layui-form"  id="re_pwd">
+				<!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
+				<div class="layui-form-item">
+					<label class="layui-form-label" for="old_pwd">当前密码</label>
+					<div class="layui-input-block">
+						<input type="text" id="old_pwd" name="oldPwd" placeholder="请输入当前密码" autocomplete="off" class="layui-input">
+					</div><br>
+					<label class="layui-form-label" for="new_pwd1">输入新密码</label>
+					<div class="layui-input-block">
+						<input type="password" id="new_pwd1"  placeholder="请输入新密码" autocomplete="off" class="layui-input">
+					</div><br>
+					<label class="layui-form-label" for="new_pwd2">验证新密码</label>
+					<div class="layui-input-block">
+						<input type="password" id="new_pwd2" name="newPwd" placeholder="请输先输入新密码" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+						<input type="submit" name="" id="sbt" value="提交修改"class="layui-btn layui-btn-radius""/>
+			</form>
+		</div>
+	</body>
+</html>

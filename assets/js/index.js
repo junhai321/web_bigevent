@@ -3,13 +3,17 @@ $(function() {
 	getUserInfo();
 	//退出点击
 	$("#out").on("click", function() {
-		layer.confirm('确定退出登录?', { icon: 3, title: '提示' },
-		function(index) {
-			window.location.href = 'login.html';
-			localStorage.removeItem('token');
-		 })
-		
+		layer.confirm('确定退出登录?', {
+				icon: 3,
+				title: '提示'
+			},
+			function(index) {
+				window.location.href = 'login.html';
+				localStorage.removeItem('token');
+			})
+
 	})
+	
 })
 
 //获取头像方法
@@ -27,6 +31,8 @@ function getUserInfo() {
 			}
 			//调用renderAVatar 渲染用户头像
 			renderAVatar(res.data);
+			//资本资料的填充
+
 		}
 	})
 }
