@@ -42,10 +42,10 @@ function renderAVatar(res) {
 	var name = res.nickname || res.username;
 	$("#get_username").html(name);
 	if (res.user_pic !== null) {
-		$("layui-nav-img").prop("src", res.user_pic).show();
+		$("#img").attr("src", res.user_pic).show();
 		$(".text-avatar").hide();
 	} else {
-		$("layui-nav-img").hide();
+		$("#img").hide();
 		$(".text-avatar").html(name[0].toUpperCase()).show();
 	}
 }
