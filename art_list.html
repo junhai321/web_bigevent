@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文章列表</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/art_list.css" />
+		<link rel="stylesheet" type="text/css" href="assets/lib/layui/css/layui.css" />
+	</head>
+	<body>
+		<div class="type">
+			<div class="layui-card">
+				<div class="layui-card-header">文章列表</div>
+				<div class="layui-card-body">
+					<table class="layui-table">
+						<colgroup>
+							<col width="400">
+							<col width="200">
+							<col width="200">
+							<col width="200">
+							<col >
+						</colgroup>
+						<thead>
+							<tr>
+								<th>文章标题	</th>
+								<th>分类</th>
+								<th>发表时间</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			<div id="test1"></div>
+		</div>
+		<script src="assets/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/lib/layui/layui.all.js"></script>
+		<script src="assets/js/ajaxPrefilter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/art_list.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			layui.use('laypage', function() {
+				var laypage = layui.laypage;
+
+				//执行一个laypage实例
+				laypage.render({
+					elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+						,
+					count: 50 //数据总数，从服务端得到
+				});
+			});
+		</script>
+		<script type="text/html" charset="utf-8" id="list">
+		{{each data}}
+		<tr>
+			<td>{{$value.title}}</td>
+			<td>{{$value.cate_name}}</td>
+			<td>{{$value.pub_date}}</td>
+			<td>{{$value.state}}</td>
+			<td><button type="button" class="layui-btn layui-btn-radius layui-btn-normal re"
+					data-id="{{$value.Id}}">修改</button>
+				<button type="button" class="layui-btn layui-btn-radius layui-btn-danger de"
+					data-id="{{$value.Id}}">删除</button>
+			</td>
+		</tr>
+		{{/each}}
+		</script>
+	</body>
+</html>
